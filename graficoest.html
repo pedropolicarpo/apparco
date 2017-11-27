@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Arco - Login </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.css"
+</head>
+<style>
+
+</style>
+
+
+<body>
+	<canvas id="myChart" width="206" height="110"></canvas>
+</body>
+
+<script src="js/jquery-3.2.1.js"></script> 
+<script src="js/materialize.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/angular.js"></script>
+<script type="text/javascript">
+	var canvas = document.getElementById('myChart');
+var data = {
+  labels: ['first', 'second'],
+  datasets: [{
+    label: "Capturadas",
+    backgroundColor: ["#0d7d71", "#26e8d5"],
+    data: [30, 50]
+  }]
+};
+
+var options = {
+  cutoutPercentage: 75,
+  rotation: 1 * Math.PI,
+  circumference: 1 * Math.PI,
+  legend: {
+    display: true,
+    position: 'bottom',
+    labels: {
+      usePointStyle: true
+    },
+    generateLabels: function(data) {
+      if (data.labels.length && data.datasets.length) {
+        return data.labels.map(function(label, i) {
+          return {
+            text: label,
+            fillStyle: data.datasets[0].backgroundColor[i],
+            hidden: isNaN(data.datasets[0].data[i]),
+            pointStyle: 'circle',
+            // Extra data used for toggling the correct item
+            index: i
+          };
+        });
+      } else {
+        return [];
+      }
+    }
+  }
+};
+
+var myBarChart = Chart.Doughnut(canvas, {
+  data: data,
+  options: options
+});
+</script>

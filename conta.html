@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Arco - Login </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.css"
+
+</head>
+<style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+   body{background: #eaedef;  /* fallback for old browsers */
+}
+
+        main {
+      flex: 1 0 auto;
+    }
+.opacity {
+  opacity: 0.90;
+}
+.opacity2 {
+  opacity: 0.95;
+}
+
+.azl-grad {background-image: linear-gradient(to right, #00cfe6 , #007aa8 300%)}
+.azl-grad2 {background-image: linear-gradient(to bottom, #00cfe6 , #007aa8 400%)}
+.ctn-grad {background-image: linear-gradient(to top, #8e9eab  -78%, #eef2f3 105%)}
+.ctn-grad2 {background-image: linear-gradient(to left, #8e9eab  -32%, #eef2f3 100%)}
+.ctn-grad3 {background-image: linear-gradient(to left, #8e9eab  -50%, #eef2f3 80%)}
+.sidewhite {background-image: linear-gradient(to left, #eaedef, #eaedef)}
+.btn-grad {background-image: linear-gradient(to top, #00cfe6  -800%, #007aa8 800%)}
+ .btn-grad2 {background-image: linear-gradient(to right, #2980b9  -50%, #2c3e50  100%)}
+ .btn-border {border: 1px solid #00cfe6}
+
+
+
+        .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #e91e63;
+    }
+        .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 1px solid #e91e63;
+      box-shadow: none;
+    }
+
+
+
+</style>
+</head>
+
+<body>
+
+  <main>
+    <nav class="azl-grad z-depth-0">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Sua conta</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+      <ul class="side-nav ctn-grad2 opacity2" id="mobile-demo">
+        <!-perfil no navbar->
+            <li><div class="user-view">
+      <a href="conta.html"><img class="circle" src="imgs/avatar.png"></a>
+      <a href="conta.html"><span class="blue-grey-text text-darken-4 name" id="nomec">Olá</span></a>
+      <a href="conta.html"><span class="blue-grey-text text-darken-4 email" id="email1">Nome</span></a>
+      <p class="item-note" id="email1"></p>
+    </div></li>
+    <li><div class="divider grey darken-1"></div></li>
+        <li><a href="analise.html">Análise <i class="material-icons">trending_up</i></a></li>
+        <li><a href="estati.html">Estatísticas <i class="material-icons">pie_chart_outlined</i></a></li>
+        <li><a href="dor.html">Reportar dor <i class="material-icons">sentiment_very_dissatisfied</i></a></li>
+        <li class="active azl-grad2 opacity2"><a href="conta.html" class="white-text">Conta <i class="material-icons white-text">perm_identity</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <section>
+    <br>
+    <br>
+             <div class="container" >
+                <div class="row">
+               <div class="z-depth-5 ctn-grad opacity row" style="display: block; margin: -12px 28px 0px 28px; padding: 0px 20px 0px 20px; border-radius: 7px";>
+                <div class="row">
+              <div class="col l6 s12">
+                <h5 class="grey-text center">Seus dados:</h5>
+                <p class="grey-text  center" id="desvio">Aqui serão exibidos os dados e configurações do usuário.
+
+                  <p class="grey-text  center" id="media">
+              </div>
+               </div>
+             </div>
+           </div>
+
+  <div class='row'>
+    <div class='center'>
+  <a class="waves-effect waves-light btn btn-border transparent z-depth-0" href="calibragem.html"  style="color:#00cfe6">Calibrar</a>
+</div>
+</div>
+<div class="center">        <a href="#" class="z-depth-0 waves-effect waves-light btn red darken-1 indigo-text text-lighten-5" id="logout">Logout</a> </div>
+</main>
+
+<footer>
+
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <script src="js/auth.js"></script> 
+  <script src="js/materialize.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script>
+    $(function(){
+        $(".button-collapse").sideNav();
+    });
+    </script>
+<script> $('.carousel.carousel-slider').carousel({fullWidth: true});</script>
+</body>
+</html>

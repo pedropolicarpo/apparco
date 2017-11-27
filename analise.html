@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Arco - Login </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.css"
+
+</head>
+<style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+   body{background: #eaedef;  /* fallback for old browsers */
+}
+
+        main {
+      flex: 1 0 auto;
+    }
+.opacity {
+  opacity: 0.90;
+}
+.opacity2 {
+  opacity: 0.95;
+}
+
+.azl-grad {background-image: linear-gradient(to right, #00cfe6 , #007aa8 300%)}
+.azl-grad2 {background-image: linear-gradient(to bottom, #00cfe6 , #007aa8 400%)}
+.ctn-grad {background-image: linear-gradient(to top, #8e9eab  -78%, #eef2f3 105%)}
+.ctn-grad2 {background-image: linear-gradient(to left, #8e9eab  -32%, #eef2f3 100%)}
+.ctn-grad3 {background-image: linear-gradient(to left, #8e9eab  -50%, #eef2f3 80%)}
+.azl-grad3 {background-image: linear-gradient(to bottom, #00cfe6 , #007aa8 220%)}
+.sidewhite {background-image: linear-gradient(to left, #eaedef, #eaedef)}
+ .btn-grad {background-image: linear-gradient(to right, #1488CC  0%, #2B32B2  100%)}
+ .btn-grad2 {background-image: linear-gradient(to right, #2980b9  -50%, #2c3e50  100%)}
+ .btn-border {border: 1px solid #00cfe6}
+
+
+        .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #e91e63;
+    }
+        .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 1px solid #e91e63;
+      box-shadow: none;
+    }
+
+.btn-round {
+  border-radius: 10px;
+}
+
+
+.container {
+  width: 80%;
+  margin: 15px auto;
+}
+
+.btn-sq-lg {
+  width: 150px !important;
+  height: 90px !important;
+}
+
+
+</style>
+
+    <script type="text/javascript">
+        //jogar pra tela de login caso em branco
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/') + 1);
+    if (localStorage.login == "true" && filename == 'login.html') {
+        window.location.href = "analise.html";
+    } else if (localStorage.login == null) {
+        window.location.href = "login.html";
+    } else if (localStorage.login == "false" && filename != 'login.html') {
+        window.location.href = "login.html";
+    }
+    </script>
+<script src="js/jquery-3.2.1.js"></script> 
+<script src="js/auth.js" type="text/javascript"></script> 
+<script src="js/materialize.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/angular.js"></script>
+<!--<script src="js/angular-chart.js"></script>-->
+<script type="text/javascript"></script>
+<script>
+  $(function(){
+  $(".button-collapse").sideNav();
+  });
+</script>
+
+
+
+
+</head>
+<body>
+
+  <main>
+    <nav class="azl-grad z-depth-0">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo blue-grey-text text-lighten-5 center">Análise</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons blue-grey-text text-lighten-5">menu</i></a>  
+      <ul class="side-nav sidewhite opacity" id="mobile-demo">
+      	<!--perfil no navbar-->
+      	    <li><div class="user-view">
+      <a href="conta.html"><img class="circle" src="imgs/avatar.png"></a>
+      <a href="conta.html"><span class="blue-grey-text text-darken-4  name" id="nomec">Olá</span></a>
+      <a href="conta.html"><span class="blue-grey-text text-darken-4  email" id="email1">Nome</span></a>
+      <p class="item-note" id=""></p>
+    </div></li>
+    <li><div class="divider blue-grey"></div></li>
+        <li class="active azl-grad2 opacity2"><a href="analise.html" class="white-text">Análise <i class="material-icons white-text">trending_up</i></a></li>
+        <li><a href="estati.html">Estatísticas <i class="material-icons">pie_chart_outlined</i></a></li>
+        <li><a href="dor.html">Reportar dor <i class="material-icons">sentiment_very_dissatisfied</i></a></li>
+        <li><a href="conta.html">Conta <i class="material-icons">perm_identity</i></a></li>
+      </ul>
+      </div>
+  </nav>
+
+<div class="row">
+              <div class="col l6 s12">
+           <!--     <h5 class="grey-text center">Quase lá...</h5> -->
+              <!--  <p class="grey-text  center">Ainda não foram registradas amostras de atividade de seu Colete Arco. Calibre para iniciar o sistema.</p> -->
+
+              <!--preloader-->
+
+              <p class="center">Avaliação da sua postura:</p>
+              </div>
+
+<section>
+
+
+<div class="container col 16 s12" >
+<canvas id="myChart" width="206" height="110">
+
+
+</canvas>
+
+</div>
+<div class="container">
+      <div class="row">
+        <div class="center">
+          <p><h5>
+<a  href="estati.html" class="z-depth-0 waves-effect btn-border  btn-round btn-sq-lg center" style="color:#00cfe6"><i style="color:#00cfe6" class="center-text medium material-icons">pie_chart_outlined</i></br>Estatísticas</a>
+<a  href="dor.html" class="z-depth-0 waves-effect btn-border  btn-round  transparency btn-sq-lg center" style="color:#00cfe6"><i class="center-text medium material-icons" style="color:#00cfe6">sentiment_very_dissatisfied</i></br>Reportar dor</a>
+          <p>
+<a href="conta.html" class="z-depth-0 waves-effect btn-border btn-round  transparency btn-sq-lg center" style="color:#00cfe6"><i class="center-text medium material-icons" style="color:#00cfe6">perm_identity</i></br>Conta</a>
+
+<a  href="calibragem.html" class="z-depth-0 waves-effect btn-border btn-round  transparency btn-sq-lg center" style="color:#00cfe6"><i class="center-text medium material-icons" style="color:#00cfe6">airline_seat_recline_normal</i></br>Calibrar</a>
+</main>
+</body>
+
+
+
+<script src="js/graficoest.js"></script>
+</html>

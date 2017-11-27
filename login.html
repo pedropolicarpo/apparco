@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+  <meta name="format-detection" />
+  <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<title> Arco - Login </title>
+	<link rel="stylesheet" href="css/materialize.css">
+
+<style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+   body{background: #eaedef;  /* fallback for old browsers */
+}
+.ctn-grad {background-image: linear-gradient(to top, #8e9eab  -78%, #eef2f3 105%)}
+        main {
+      flex: 1 0 auto;
+    }
+
+.opacity2 {
+  opacity: 0.95;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #00cfe6  0%, #007aa8 190%)}
+ .btn-grad2 {background-image: linear-gradient(to right, #2980b9  -50%, #2c3e50  100%)}
+ .btn-border {border: 1.5px solid #00cfe6}
+ .btn-border2 {border: 2px solid #00cfe6}
+</style>
+</head>
+
+  <script type="text/javascript">
+    var url = window.location.pathname;var filename = url.substring(url.lastIndexOf('/')+1);
+    if(localStorage.login=="true" && filename == 'login.html'){window.location.href = "analise.html";}
+    else if(localStorage.login=="false" && filename != 'login.html'){window.location.href = "login.html";}
+  </script>
+
+<body>
+
+  <main>
+   <center>
+      <img class="responsive-img" style="width: 170px;" src="imgs/arcms.png" />
+
+              <div class="container">
+               <div class="z-depth-0 transparent row" style="display: inline-block;  margin: 8px 0px 12px 0px; padding: 0px 20px 0px 20px;  border-radius: 11px">
+                <form class="col s12">
+                 <div class='row'>
+                  <div class='col s12'>
+                  </div>
+                   </div>
+
+              <div class='row'>
+               <div class='input-field  col s12'>
+                <input class='validate' type='email' name='email' id='email' />
+                 <label for='email'>Email do usuário</label>
+                  </div>
+                   </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='pwd' id='pwd' />
+                <label for='password'>Senha</label>
+             </div>
+                <label style='float: right;'>
+                <a href="senha.html" style="color: #ff3345"><b>Esqueci minha senha</b></a>
+            </label>
+            </div>
+                         
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type="submit" name='login' id='login' class='z-depth-1 col s12 btn-large waves-effect waves-light btn-grad text-large' style="color:#eaedef">Entrar</button>
+               </div>
+            </center>
+          </form>
+
+</div>
+</div>
+<a class="z-depth-0 waves-effect waves-light btn btn-border transparent" style="color:#00cfe6" href="cadastro.html">Criar conta</a>
+</center>
+
+</main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/auth.js"></script> 
+  <script src="js/materialize.js"></script>
+</body>
+</html>

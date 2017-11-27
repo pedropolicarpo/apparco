@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> Arco - Cadastro </title>
+	<link rel="stylesheet" href="css/materialize.css">
+
+
+<style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+   body{background: #eaedef;  /* fallback for old browsers */
+}
+        main {
+      flex: 1 0 auto;
+    }
+
+.opacity {
+  opacity: 0.90;
+}
+
+.ctn-grad {background-image: linear-gradient(to top, #8e9eab  -78%, #eef2f3 105%)}
+.btn-grad {background-image: linear-gradient(to right, #00cfe6  0%, #007aa8 190%)}
+ .btn-border {border: 1.5px solid #00cfe6}
+
+        .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label {
+      color: #e91e63;
+    }
+        .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 1px solid #e91e63;
+      box-shadow: none;
+    }
+</style>
+</head>
+
+<body>
+<section>
+  <main>
+   <center>
+      <img class="responsive-img" style="width: 170px;" src="imgs/arcmv.png" />
+    
+
+<div class="section">
+      <h6 class="grey-text ">Insira seus dados</h6>
+  </br>
+
+              <div class="container" >
+              	<div class="row">
+               <div class="z-depth-0 transparent row" style="display: block; margin: -50px 28px 0px 28px; padding: 0px 20px 0px 20px;  border-radius: 11px">
+                <form class="col s12" action="includes/cadastro.inc.php" method="POST">
+                 <div class='row'>
+                  <div class='col s12'>
+                  </div>
+                   </div>
+
+          <div class='row'>
+        <div class="input-field col s12">
+          <input id="nomec" name='nomec' type="text" class="validate">
+          <label for="name">Nome completo</label>
+        </div>
+                   </div>
+
+            <div class="row">
+        <div class="input-field col s12">
+          <input id="email" name='email' type="email" class="validate">
+          <label for="email" data-error="Inválido">Email</label>  
+        </div>
+
+            </div>
+                         <div class="row">
+        <div class="input-field col s12">
+          <input id="pwd" name='pwd' type="password" class="validate">
+          <label for="password">Senha</label>
+        </div>
+             </div>
+
+            <center>
+              <div class='row'>
+                <button type='submit' name='submit' class='z-depth-1 col s12 btn-large btn-grad waves-effect waves-light '>Cadastrar</button>
+               </div>
+            </center>
+          </form>
+
+</div>
+</div>
+<a class="z-depth-0 waves-effect waves-light btn btn-border transparent" style="color:#00cfe6" href="login.html">Já tenho uma conta</a>
+
+
+</main>
+      
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="js/materialize.js"></script>
+</body>
+</html>
