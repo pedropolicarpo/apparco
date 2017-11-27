@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://PhoneGap.com/ns/1.0"
         id        = "com.PhoneGap.example"
@@ -13,6 +13,6 @@
         Grupo La Bande 
     </author>
 
-<icon src="imgs/appicon.png" gap:platform="android"/>
+<icon src="imgs/appicon.png" width="1362" height="1246" gap:platform="android"/>
 
 </widget>
